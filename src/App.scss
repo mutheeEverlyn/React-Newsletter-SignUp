@@ -1,0 +1,95 @@
+*{
+  padding: 0px;
+  margin: 0px;
+}
+body{
+  background: hsl(235, 18%, 26%);
+.container{
+  width: 800px;
+  margin: 20px auto;
+  display: flex;
+  padding: 20px;
+  border-radius: 20px;
+  background: white;
+  .content{
+    // width: 50%;
+    margin-top: 50px;
+    padding: 30px;
+   
+    h1{
+      margin-bottom: 20px;
+    color: hsl(234, 29%, 20%);
+  }
+  p{
+    margin-bottom: 20px;
+    color:   hsl(231, 7%, 60%);
+  }
+  form{
+    input{
+      padding: 10px;
+      width: 300px;
+      border-radius: 5px;
+    }
+    button{
+      border-radius: 5px;
+      color: white;
+      background: hsl(234, 29%, 20%) ;
+      width: 320px;
+      padding: 10px;
+    }
+  }
+}
+.image{
+  width: 100%;
+  .desktopImage{
+    display: block;
+  }
+  .mobileImage{
+    display: none;
+  }
+}
+}
+}
+@media(max-width: 760px){
+  body{
+    font-size: 20px;
+  .container{
+    align-items: center;
+    display: flex;
+    border-radius: 0px;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    .content{
+     order: 2;
+     margin: 0px;
+     form{
+     input{
+      width: 95%;
+     }
+     button{
+      width: 100%;
+      border:none;
+      &:hover{
+        background: linear-gradient(to right,hsl(4, 92%, 54%),hsl(4, 100%, 67%),hsl(4, 57%, 71%));
+    }
+     }
+     .error{
+      color: hsl(4, 100%, 67%);
+     }
+    }
+    }
+    .image{
+      .desktopImage{
+        display: none;
+      }
+      .mobileImage{
+        width: 100%;
+        display: block;
+      }
+    }
+  }
+}
+}

@@ -1,0 +1,38 @@
+body{
+    background: hsl(235, 18%, 26%);
+.container{
+    background: white;
+    margin: 50px auto;
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    h1{
+        color:  hsl(234, 29%, 20%);
+    }
+    p{
+        color: hsl(235, 18%, 26%);
+    }
+    button{
+        background:  hsl(234, 29%, 20%);
+        border-radius: 5px;
+        border:none;
+        &:hover{
+            background: linear-gradient(to right,hsl(4, 92%, 54%),hsl(4, 100%, 67%),hsl(4, 57%, 71%));
+        }
+    }
+}
+}
+@media(max-width: 760px){
+    body{
+        width: 100vw;
+        height: 100vh;
+    .container{
+        margin: 0px;
+        width: 100%;
+        border-radius: 0px;
+        button{
+            margin-bottom: 100px;
+        }
+    }
+}
+}
