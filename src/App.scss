@@ -1,10 +1,12 @@
 * {
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
   background: hsl(235, 18%, 26%);
+  font-family: 'Arial', sans-serif;
 }
 
 .container {
@@ -28,6 +30,22 @@ body {
   p {
     margin-bottom: 20px;
     color: hsl(231, 7%, 60%);
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+
+    li {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+
+      img {
+        margin-right: 10px;
+      }
+    }
   }
 
   form {
@@ -62,6 +80,7 @@ body {
     .error-message {
       color: hsl(4, 100%, 67%);
       font-size: 0.875rem;
+      margin-top: -5px;
       margin-bottom: 10px;
     }
 
@@ -94,23 +113,20 @@ body {
 }
 
 @media (max-width: 760px) {
-  body {
-    font-size: 20px;
-  }
-
   .container {
     align-items: center;
     display: flex;
-    border-radius: 0px;
+    border-radius: 0;
     flex-direction: column;
     width: 100%;
     height: 100%;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 
     .content {
       order: 2;
-      margin: 0px;
+      margin: 0;
+      padding: 20px;
 
       form {
         input {

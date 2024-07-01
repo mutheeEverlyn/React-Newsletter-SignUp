@@ -31,17 +31,13 @@ function App() {
   return (
     <div className='container'>
       <div className='content'>
-        <h1>Stay Updated</h1>
+        <h1>Stay Updated!</h1>
         <p>Join 60,000+ product managers receiving monthly updates on:</p>
-        <p>
-          <img src={iconList} alt='list icon' /> Product discovery and building what matters
-        </p>
-        <p>
-          <img src={iconList} alt='list icon' /> Measuring to ensure updates are a success
-        </p>
-        <p>
-          <img src={iconList} alt='list icon' /> And much more!
-        </p>
+        <ul>
+          <li><img src={iconList} alt='list icon' /> Product discovery and building what matters</li>
+          <li><img src={iconList} alt='list icon' /> Measuring to ensure updates are a success</li>
+          <li><img src={iconList} alt='list icon' /> And much more!</li>
+        </ul>
         <form onSubmit={handleSubmit}>
           <label htmlFor='email'>Email Address</label>
           <div className="input-group">
