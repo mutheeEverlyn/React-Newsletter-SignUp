@@ -1,5 +1,6 @@
 import './App.scss';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import desktopImage from './assets/illustration-sign-up-desktop.svg';
 import mobileImage from './assets/illustration-sign-up-mobile.svg';
 import iconList from './assets/icon-list.svg';
@@ -8,6 +9,7 @@ import * as yup from 'yup';
 function App() {
   const [error, setError] = useState('');
   const [formData, setFormData] = useState({ email: '' });
+  const [isFormSubmitted, setIsFormSubmitted] = useState(false); // Track if form is submitted successfully
 
   const validationSchema = yup.object().shape({
     email: yup.string().required('Email is required').email('Valid email required'),
@@ -19,8 +21,10 @@ function App() {
       await validationSchema.validate(formData, { abortEarly: false });
       console.log('Form submitted', formData);
       setError('');
+      setIsFormSubmitted(true); 
     } catch (err: any) {
       setError(err.errors[0]);
+      setIsFormSubmitted(false); 
     }
   };
 
@@ -51,7 +55,14 @@ function App() {
             />
             {error && <p className='error-message'>{error}</p>}
           </div>
-          <button type='submit'>Subscribe to monthly newsletter</button>
+          {/* Conditionally render Link based on form submission state */}
+          {isFormSubmitted ? (
+            <button type='submit'>
+              <Link to="/success" style={{ textDecoration: 'none', color: 'white' }}>Subscribe to monthly newsletter</Link>
+            </button>
+          ) : (
+            <button type='submit'>Subscribe to monthly newsletter</button>
+          )}
         </form>
       </div>
       <div className='image'>

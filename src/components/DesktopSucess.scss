@@ -1,20 +1,29 @@
 body{
     background: hsl(235, 18%, 26%);
-.container{
+.successContainer{
     background: white;
-    margin: 50px auto;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
     width: 300px;
     padding: 20px;
     border-radius: 10px;
+    img{
+        width: 100px;
+    }
     h1{
         color:  hsl(234, 29%, 20%);
+        padding: 20px 0px;
     }
     p{
+        padding: 20px 0px;
         color: hsl(235, 18%, 26%);
     }
     button{
         background:  hsl(234, 29%, 20%);
         border-radius: 5px;
+        color: white;
+        padding: 20px;
         border:none;
         &:hover{
             background: linear-gradient(to right,hsl(4, 92%, 54%),hsl(4, 100%, 67%),hsl(4, 57%, 71%));

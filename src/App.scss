@@ -86,9 +86,10 @@ body {
 
     button {
       border-radius: 5px;
+      text-decoration: none;
       color: white;
       background: hsl(234, 29%, 20%);
-      width: 320px;
+      width: 300px;
       padding: 10px;
       border: none;
       cursor: pointer;
@@ -96,6 +97,7 @@ body {
       &:hover {
         background: linear-gradient(to right, hsl(4, 92%, 54%), hsl(4, 100%, 67%), hsl(4, 57%, 71%));
       }
+      
     }
   }
 }
@@ -130,7 +132,7 @@ body {
 
       form {
         input {
-          width: 95%;
+          width: 100%;
         }
 
         button {
